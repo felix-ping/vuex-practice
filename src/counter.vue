@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-        click:{{count}}times,count is {{  evenOrOdd}}
+        click:{{count}}times,count is {{  evenOrOdd}} 
         <button @click='increment'>+</button>
         <button @click='decrement'>-</button>
         <button @click='incrementIfEven'>ifEven</button>
         <button @click="incrementAsync">Increment async</button>
+        recentHistory{{recentHistory}}
       </div>
 </template>
 
@@ -12,12 +13,10 @@
 import {mapState, mapGetters, mapMutations, mapActions} from 'vuex'
 export default {
   computed: {
-    ...mapState(['count']),
-    ...mapGetters(['evenOrOdd'])
+    ...mapGetters(['evenOrOdd', 'recentHistory','count'])
   },
   methods: {
-    ...mapMutations(['increment','decrement','incrementIfEven']),
-    ...mapActions(['incrementAsync'])
+    ...mapActions(['incrementAsync','increment','decrement','incrementIfEven'])
   }
 }
 </script>

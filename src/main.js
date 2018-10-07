@@ -1,7 +1,7 @@
 import Vue from 'vue'
 // import Vuex from 'vuex'
 import counter from './counter.vue'
-import store from './js/store.js'
+import store from './store/index.js'
 Vue.config.productionTip = false
 // Vue.use(Vuex)
 
